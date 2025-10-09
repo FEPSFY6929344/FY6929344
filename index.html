@@ -134,16 +134,15 @@ classifier confidence to drop, as in Vlachos (2008).”
       //Get reference to button element
       var button = document.getElementByld("colourButton");
       //change button colour
-      function changeColour() {
+      function changeColor() {
         //generate random colour (hex)
         var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-
         //set button background colour to random colour
         button.style.backgroundColor = randomColor;
       }
 
       //add a click event to the button
-      button.addEventListener("click", changeColour);
+      button.addEventListener("click", changeColor);
       
     </script>
   </body>
