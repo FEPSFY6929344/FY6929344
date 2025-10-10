@@ -153,19 +153,19 @@ button.addEventListener("click", changeColor);
 </form>-->
 
 <body>
-  <input type="text" id="fname" placeholder="Enter text">
-  <button id="submit">Submit</button>
-<script>
+  <input type="text" id="textInput" placeholder="Enter text">
+  <button id="alertButton">Submit</button>
+  <script>
   //reference to input field
-  var input = document.getElementById("fname");
-  var button2 = document.getElementById("submit");
+  var input = document.getElementById("textInput");
+  var button2 = document.getElementById("alertButton");
   //function to show alert with input
   function showAlert() {
     var inputText = input.value;
     alert("You entered: " + inputText);
   }
   button2.addEventListener("click", showAlert);   
-</script>
+  </script>
 </body>
   
 </html>
