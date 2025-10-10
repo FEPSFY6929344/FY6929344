@@ -150,8 +150,20 @@ button.addEventListener("click", changeColor);
 <form target="_blank">
 <label for="fname">First name: </label> <br>
 <input type="text" id="fname" name="fname" placeholder="Enter text"><br>
-<input type="submit" value="Submit">
+<input type="submit" id="submit" value="Submit">
 </form>
 
+<script>
+  //reference to input field
+  var input = document.getElementById("fname");
+  var button2 = document.getElementById("submit");
+  //function to show alert with input
+  function showAlert() {
+    var inputText = input.value;
+    alert("You entered" + inputText);
+  }
+  button2.addEventListener("click", showAlert());
+    
+</script>
   
 </html>
