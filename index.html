@@ -124,7 +124,6 @@ classifier confidence to drop, as in Vlachos (2008).”
   </p>
 
 
-
 <!--button colour change-->
   <head>
 <title>Change Button Colour</title>
@@ -152,6 +151,7 @@ button.addEventListener("click", changeColor);
 <button id="submit">Submit</button>
 </form>-->
 
+<!--Input button with function-->
 <body>
   <br> <input type="text" id="textInput" placeholder="Enter text"> <br> <br>
   <button id="alertButton">Submit</button> <br>
@@ -167,5 +167,12 @@ button.addEventListener("click", changeColor);
   button2.addEventListener("click", showAlert);   
   </script>
 </body>
+
+  <!--Random number generation and updates-->
+  <p id="randomgen"></p>
+  <script>
+    let x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("randomgen").innerHTML = x;
+  </script>
   
 </html>
