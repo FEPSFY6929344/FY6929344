@@ -146,13 +146,16 @@ button.addEventListener("click", changeColor);
 </script>
 </body>
   
-<!--text input box-->
-<form> <!--target="_blank"-->
+<!--text input box <form target="_blank">
 <label for="fname">First name: </label> <br>
 <input type="text" id="fname" name="fname" placeholder="Enter text"><br>
 <button id="submit">Submit</button>
-</form>
+</form>-->
 
+<body>
+  <input type="text" id="fname" placeholder="Enter text">
+  <button id="submit">Submit</button>
+  
 <script>
   //reference to input field
   var input = document.getElementById("fname");
@@ -165,5 +168,5 @@ button.addEventListener("click", changeColor);
   button2.addEventListener("click", showAlert());
     
 </script>
-  
+</body>
 </html>
