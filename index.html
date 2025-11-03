@@ -93,6 +93,7 @@
 
   
 <!--Analysis-->
+
 <hr>
   <h3 id="Analysis">Analysis</h3>
   <p class = "ex1">
@@ -395,7 +396,16 @@ button.addEventListener("click", changeColor);
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
+    const IntroductionCount = displayWordCount("Across all disciplines of science parallel processing plays an important role in being able to 
+    solve complex problems in high speeds. In modern physics, it can be used to model black holes by 
+    running extremely complex equations simultaneously, allowing scientists to see the effects of the 
+    model in real time. In doing so, scientists are able to test theories like Einstein's general 
+    relativity without having to actually perform experiments that are not yet possible. In other areas 
+    of physics, Particle-in-cell (PIC) simulations can be used to solve problems too. For example, being 
+    able to determine how to control high temperature plasma in nuclear fusion reactors in order to keep 
+    experiments safe. Firstly, what PIC simulations are and why are they needed will be discussed, 
+    followed by what parallel processing actually is and how it compares to other methods, which will 
+    then all be summarised in a conclusion.");
     const AnalysisCount = displayWordCount("Analysis");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
