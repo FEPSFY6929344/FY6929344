@@ -114,7 +114,7 @@ parallel. In table 1 below, the time taken in a simple binary search for one thr
 data (parallel) are compared to show how each handle different volumes of data.
 
   <h3 id="Data table">Data table</h3>
-	  <p>Table 1: Time taken by sequential processors for searching in recursive version of a binary search</p>
+<p>Table 1: Time taken by sequential processors for searching in recursive version of a binary search</p>
   <table>
     <tr>
       <th>Size of Array</th>
@@ -128,6 +128,22 @@ data (parallel) are compared to show how each handle different volumes of data.
 	<tr><td>2000</td><td>1.619</td><td>1.379</td><td>2.29</td></tr>
 	<tr><td>2500</td><td>1.632</td><td>1.415</td><td>1.49</td></tr>
 	<tr><td>Average Time</td><td>1.555667</td><td>1.262333</td><td>1.532167</td></tr>
+  </table>
+
+<body>Table 2: Time taken in eight threads based (parallel processing) recursive version of a binary search</body>
+  <table>
+    <tr>
+      <th>Size of Array</th>
+      <th> Time taken for Searching elements in ms (milisecond)</th>
+    </tr>
+    <tr><td></td><td>First Element</td><td>Mid Element</td><td>Last Element</td></tr>
+    <tr><td>100</td><td>0.90</td><td>0.56</td><td>1.40</td></tr>
+   	<tr><td>500</td><td>1.10</td><td>0.59</td><td>1.29</td></td></tr>
+	<tr><td>1000</td><td>1.20</td><td>0.59</td><td>1.27</td></tr>
+	<tr><td>1500</td><td>1.40</td><td>0.60</td><td>1.35</td></tr>
+	<tr><td>2000</td><td>1.20</td><td>6.10</td><td>1.43</td></tr>
+	<tr><td>2500</td><td>1.30</td><td>0.65</td><td>1.93</td></tr>
+	<tr><td>Average Time</td><td>1.18334</td><td>1.485</td><td>1.445</td></tr>
   </table>
 </hr>
 
