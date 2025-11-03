@@ -130,7 +130,42 @@
   </table>
 </hr>
 
-  
+    In the figures above, it is evident that the 8 thread search is able to handle more data and complete tasks more 
+    quickly when comparing the average times taken for both methods. In PIC simulations, the amount of instructions 
+    that would  need to be carried out is much greater than this example, therefore parallel processing with multiple 
+    threads would be a preferred method to use. However there are some drawbacks of using parallel processing in PIC
+    simulations, for example when "modelling the plasma as cold, the noise is high" (Grigoryev et al., 2002), which is 
+    an issue as it means that significant amounts of irrelevant data is produced, which may hide any important underlying 
+    patterns that may exist. (may need to find a reference for this). Another drawback is that "the computational 
+    requirements can be very high and they drastically increase with increasing plasma density and size of the calculation 
+    domain" (Wünderlich et al., 2018), which will cause the computational time taken to increase, which could significantly 
+    effect the availability of real time data results. These drawbacks may suggest that parallel processing is not the most 
+    suitable method to obtain real-time data, since the time taken must be very minimal to be able to achieve this 
+    (add specifics here?). Another disadvantage that can come from parallel processing in general is the limited software 
+    compatibility, meaning more money may have to be spent in order to optimise software as well as purchasing specialised 
+    hardware. As well as these costs, there are added costs as more powerful parallel systems will have increased power 
+    consumption. 
+
+    Comparing parallel processing and quantum parallelism methods:
+    Instead, a method called quantum parallelism could be used, which is "the capability to execute numerous operations 
+    concurrently by exploiting quantum physics" (Wu et al., 2025). The reason that this could be used is to utilise quantum 
+    technologies "to accelerate simulations or a part of the plasma simulations" (Hedge et al., 2025). This is made possible 
+    by the speed at which it is able to compute problems at and the scale of data it can take in, "problems that grow in memory 
+    requirements, …can be solved with relatively small quantum computers" (QuEra, 2021). However, with these benefits there are 
+    also disadvantages relating to hardware limitations. An example of this is cost and complexity, as "super low temperatures 
+    are required for the quantum computers to work effectively" (Tencent Cloud, 2025), which is expensive to achieve. There are 
+    also "limited algorithms that are efficient for quantum parallelism, limiting the applicability of this method" (Tencent 
+    Cloud, 2025), meaning that some variations of PIC simulations may not be suitable to use quantum parallelism with.
+
+    To compare costs, a quantum computer, which is required in order to make quantum parallelism work, "will range from
+    $5 million to over $15 million" (Fit Design, 2025). In comparison, the components for parallel processing will be a lot 
+    cheaper altogether, even though multiple components may have to be brought, for example the RTX 4090 graphics card may need to
+    be purchased "starting at £1499" (NVIDIA, 2025) for one. By comparing the costs, the total for a parallel processing computer 
+    will be much lower than that of a quantum computer, and therefore will be a much cheaper and more accessible way to compute the 
+    PIC simulations. Alongside hardware expenses, there will be more expenses produced for running these methods, with the quantum
+    computer requiring more power as it is very computationally intensive, which requires more money to run. Quantum parallelism 
+    also has much more limited software in comparison to parallel processing, meaning specialised software would be required, 
+    resulting in more expenses, whilst also leaving less choice on what can be used meaning there may be more limitations for modelling.
 
 
 
