@@ -38,7 +38,7 @@ th {
 
 
 
-   .banner {
+.banner {
   width: 100%;       /* Make the image fill the width of its container */
   max-width: 1200px; /* Optional: don’t stretch beyond original size */
   height: auto;      /* Maintain aspect ratio */
