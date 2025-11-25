@@ -315,16 +315,16 @@ button.addEventListener("click", changeColor);
 <p id="totalWordCount"></p>
 <hr>
 <script>
-  // Function to calculate and display word count for a specified section
-  //function displayWordCount(sectionId, outputId) {
+   //Function to calculate and display word count for a specified section
+   function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
-    //const text = document.getElementById(sectionId).textContent;
+    const text = document.getElementById(Analysis).textContent;
     // Split text into words based on spaces and filter out any empty strings
-    //const wordArray = text.trim().split(/\s+/);
+    const wordArray = text.trim().split(/\s+/);
     // Count the words
-    //const wordCount = wordArray.length;
+    const wordCount = wordArray.length;
     // Return the word count for summing purposes
-    //return wordCount;
+    return wordCount;
   //}
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
