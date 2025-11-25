@@ -44,3 +44,8 @@ th {
   margin: 0 auto;        /* Center image */
 }
 
+.content-wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
