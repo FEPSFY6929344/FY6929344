@@ -1,6 +1,4 @@
-/* ===========================
-   GENERAL PAGE STYLING
-   =========================== */
+
 
 body {
   background-color: #ffffff;
@@ -20,10 +18,6 @@ hr {
   margin: 20px 0;
 }
 
-/* ===========================
-   TABLE STYLING
-   =========================== */
-
 table {
   font-family: Calibri, Arial, sans-serif;
   border-collapse: collapse;
@@ -36,15 +30,6 @@ th {
   padding: 10px;
   border
 
-
-
-//.banner {
-//  width: 100%;       /* Make the image fill the width of its container */
-//  max-width: 1200px; /* Optional: don’t stretch beyond original size */
-//  height: auto;      /* Maintain aspect ratio */
-//  display: block;    /* Remove any inline spacing */
- // margin: 0 auto;    /* Center the image if it’s smaller than container */
-//}
 
 .banner-container {
   max-width: 100%;       /* Container can be full width */
