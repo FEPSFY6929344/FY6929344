@@ -93,19 +93,19 @@
 <hr>
 <h4 id="Analysis">Analysis</h4>
 <p>
-What are PIC simulations and why are they important? <br>
+<strong>What are PIC simulations and why are they important?</strong> <br>
 PIC simulations "are routinely used as effective tools to understand kinetic phenomena in laboratory, astrophysical and fusion-relevant plasmas" <a href="https://doi-org.surrey.idm.oclc.org/10.1016/j.jcp.2019.03.020">(Higginson et al., 2019)</a>, which is important as this allows scientists to understand how to control high temperature plasmas in nuclear fusion reactors. The need to control these plasmas is so they do not "damage the reactor and cause the plasma to cool-down. If this happens, the plasma will not remain 'fusion-able'" <a href="https://doi-org.surrey.idm.oclc.org/10.1016/j.jcp.2019.03.020">(Goddijn, 2021)</a>, which would cause disruptions in energy supply and cause significant expenses due to maintenance. Another need to control this is because nuclear fusion has large benefits to energy production, for example "promises to be a safe, low carbon and sustainable part of the world’s future energy supply"<a href="https://www.ukaea.org/fusion-energy/">(UKAEA, n.d.)</a>, which is more beneficial than other forms of energy like fossil fuels which are non-renewables and harmful to the environment. In PIC simulations, a method called parallel processing is used to compute large volumes of data and calculations. Due to this, they require multiple threads of calculations to be ran simultaneously to carry out their required tasks effectively.
 </p>
 
 <p>
-Comparing parallel and sequential processing methods: <br>
+<strong>Comparing parallel and sequential processing methods: </strong> <br>
 Parallel processing is a method in computing that allows multiple streams of data to be processed concurrently, whereas another method called sequential processing "refers to the execution of tasks or instructions in a specific order, where each task is completed before moving on to the next one" <a href="https://www.lenovo.com/gb/en/glossary/sequential-processing/?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOoqVzpv_Dv8UvCx7v7luNKAPkM7718nQkHIfPzZKHM5AYIrd-Vu_">(Lenovo, 2025)</a>. The reason as to why parallel is used over sequential is that multiple calculations need to be run simultaneously to see real-time results of the simulations, which can be handled much more efficiently by parallel. In table 1 below, the time taken in a simple binary search for one thread of data (sequential) vs figure 2 with 8 threads of data (parallel) are compared to show how each handle different volumes of data.
 </p>
 
 	
 <p>
   <h4 id="Data table">Data tables</h4>
-<body>Table 1: Time taken by sequential processors for searching in recursive version of a binary search</body>
+<body><strong>Table 1: Time taken by sequential processors for searching in recursive version of a binary search</strong></body>
   <table>
     <tr>
       <th>Size of Array</th>
@@ -121,7 +121,7 @@ Parallel processing is a method in computing that allows multiple streams of dat
 	<tr><td>Average Time</td><td>1.555667</td><td>1.262333</td><td>1.532167</td></tr>
   </table>
 
-<body>Table 2: Time taken in eight threads based (parallel processing) recursive version of a binary search</body>
+<body><strong>Table 2: Time taken in eight threads based (parallel processing) recursive version of a binary search</strong></body>
   <table>
     <tr>
       <th>Size of Array</th>
@@ -141,14 +141,14 @@ Parallel processing is a method in computing that allows multiple streams of dat
 In the tables above, it is evident that the 8 thread search is able to handle more data and complete tasks more quickly when comparing the average times taken for both methods. In PIC simulations, the amount of instructions that would  need to be carried out is much greater than this example, therefore parallel processing with multiple threads would be a preferred method to use. However there are some drawbacks of using parallel processing in PIC simulations, for example when "modelling the plasma as cold, the noise is high" <a href="https://ebookcentral.proquest.com/lib/surrey/reader.action?c=UERG&docID=3041636&ppg=133">(Grigoryev et al., 2002)</a>, which is an issue as it means that significant amounts of irrelevant data is produced, which may hide any important underlying patterns that may exist. (may need to find a reference for this). Another drawback is that "the computational requirements can be very high and they drastically increase with increasing plasma density and size of the calculation domain" <a href="https://doi-org.surrey.idm.oclc.org/10.1063/1.5011799">(Wünderlich et al., 2018)</a>, which will cause the computational time taken to increase, which could significantly effect the availability of real time data results. These drawbacks may suggest that parallel processing is not the most suitable method to obtain real-time data, since the time taken must be very minimal to be able to achieve this (add specifics here?). Another disadvantage that can come from parallel processing in general is the limited software compatibility, meaning more money may have to be spent in order to optimise software as well as purchasing specialised hardware. As well as these costs, there are added costs as more powerful parallel systems will have increased power consumption. <br> <br> 
 </p>
 <p>
-Comparing parallel processing and quantum parallelism methods: <br>
+<strong>Comparing parallel processing and quantum parallelism methods: </strong> <br>
 Instead, a method called quantum parallelism could be used, which is "the capability to execute numerous operations concurrently by exploiting quantum physics" <a href="https://doi-org.surrey.idm.oclc.org/10.1103/PhysRevResearch.7.013177">(Wu et al., 2025)</a>. The reason that this could be used is to utilise quantum technologies "to accelerate simulations or a part of the plasma simulations" <a href="https://doi.org/10.1016/j.future.2025.108087">(Hedge et al., 2025)</a>. This is made possible by the speed at which it is able to compute problems at and the scale of data it can take in, "problems that grow in memory requirements, …can be solved with relatively small quantum computers" <a href="https://www.quera.com/glossary/parallelism">(QuEra, 2021)</a>. However, with these benefits there are also disadvantages relating to hardware limitations. An example of this is cost and complexity, as "super low temperatures are required for the quantum computers to work effectively" <a href="https://www.tencentcloud.com/techpedia/106139">(Tencent Cloud, 2025)</a>, which is expensive to achieve. There are also "limited algorithms that are efficient for quantum parallelism, limiting the applicability of this method"<a href="https://www.tencentcloud.com/techpedia/106139">(Tencent Cloud, 2025)</a>, meaning that some variations of PIC simulations may not be suitable to use quantum parallelism with.
 </p>
 <p>
 To compare costs, a quantum computer, which is required in order to make quantum parallelism work, "will range from $5 million to over $15 million" <a href="https://www.fitdesignldn.com/post/quantum-computer-price-list#:~:text=The%20cost%20of%20manufacturing%20a,monthly%20amounts%20of%20about%20%24100">(Fit Design, 2025)</a>. In comparison, the components for parallel processing will be a lot cheaper altogether, even though multiple components may have to be brought, for example the RTX 4090 graphics card may need to be purchased "starting at £1499" <a href="https://www.nvidia.com/en-gb/geforce/graphics-cards/40-series/rtx-4090/">(NVIDIA, 2025)</a> for one. By comparing the costs, the total for a parallel processing computer will be much lower than that of a quantum computer, and therefore will be a much cheaper and more accessible way to compute the PIC simulations. Alongside hardware expenses, there will be more expenses produced for running these methods, with the quantum computer requiring more power as it is very computationally intensive, which requires more money to run. Quantum parallelism also has much more limited software in comparison to parallel processing, meaning specialised software would be required, resulting in more expenses, whilst also leaving less choice on what can be used meaning there may be more limitations for modelling.
 </p>
 <p>
-Conclusion: <br>
+<strong>Conclusion:</strong> <br>
 Taking into account all the points that have been discussed above, it is evident that parallel processing is the most applicable and cost effective method, that remains one of the most accessible ways to use PIC simulations for the average researcher. It is also able to process large volumes of data at relatively quick speeds, allowing for real-time results to be produced unlike that of sequential processing. Therefore, from this it can be said that parallel processing is especially useful for particle-in-cell simulations.
 </p>
 
@@ -157,8 +157,9 @@ Taking into account all the points that have been discussed above, it is evident
 
 <!--Reference table-->
 <hr>
-  <h4 id="References">References</h4>
-  <p>		
+<h4 id="References">References</h4>
+<p>
+<strong>References in Article:</strong> <br>
 Dubey, S. and Mathur, K. (2017) 'Comparative Performance Analysis of Binary Search in Sequential and Parallel Processing'. To be published in International journal for Research in Applied Science and Engineering Technology [IJRASET], [Online]. Available at: <a href="https://www.ijraset.com/fileserve.php?FID=10546">https://www.ijraset.com/fileserve.php?FID=10546</a> [Accessed: 15/10/2025]. <br><br>
 
 Fit Design (2025) Complete Quantum Computer Price List | Models, Specs & Costs. Available at:<a href="https://www.fitdesignldn.com/post/quantum-computer-price-list#:~:text=The%20cost%20of%20manufacturing%20a,monthly%20amounts%20of%20about%20%24100">https://www.fitdesignldn.com/post/quantum-computer-price-list#:~:text=The%20cost%20of%20manufacturing%20a,monthly%20amounts%20of%20about%20%24100</a> [Accessed: 16/10/2025]. <br><br>
@@ -185,7 +186,8 @@ Wu, S. et al. (2025) 'Quantum data parallelism in quantum neural networks' [Onli
 
 Wünderlich, D. (2018) 'Review of particle-in-cell modelling for the extraction region of large negative hydrogen ion sources for fusion'. [Online]. Available at: <a href="https://doi-org.surrey.idm.oclc.org/10.1063/1.5011799">https://doi-org.surrey.idm.oclc.org/10.1063/1.5011799</a> [Accessed: 14/10/2025]. <br><br>
 
-  </p>
+<strong>References in Video:</strong> <br>
+</p>
 
 
 
