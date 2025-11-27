@@ -127,20 +127,20 @@ Parallel processing is a method in computing that allows multiple streams of dat
 </table>
 
 <body><strong>Table 2: Time taken in eight threads based (parallel processing) recursive version of a binary search</strong></body>
-  <table>
-    <tr>
-      <th>Size of Array</th>
-      <th> Time taken for Searching elements in ms (milisecond)</th>
-    </tr>
-    <tr><td></td><td>First Element</td><td>Mid Element</td><td>Last Element</td></tr>
-    <tr><td>100</td><td>0.90</td><td>0.56</td><td>1.40</td></tr>
-   	<tr><td>500</td><td>1.10</td><td>0.59</td><td>1.29</td></td></tr>
-	<tr><td>1000</td><td>1.20</td><td>0.59</td><td>1.27</td></tr>
-	<tr><td>1500</td><td>1.40</td><td>0.60</td><td>1.35</td></tr>
-	<tr><td>2000</td><td>1.20</td><td>6.10</td><td>1.43</td></tr>
-	<tr><td>2500</td><td>1.30</td><td>0.65</td><td>1.93</td></tr>
-	<tr><td>Average Time</td><td>1.18334</td><td>1.485</td><td>1.445</td></tr>
-  </table>
+<table>
+<tr>
+<th>Size of Array</th>
+<th colspan="3"> Time taken for Searching elements in ms (milisecond)</th>
+</tr>
+<tr><td></td><td>First Element</td><td>Mid Element</td><td>Last Element</td></tr>
+<tr><td>100</td><td>0.90</td><td>0.56</td><td>1.40</td></tr>
+<tr><td>500</td><td>1.10</td><td>0.59</td><td>1.29</td></td></tr>
+<tr><td>1000</td><td>1.20</td><td>0.59</td><td>1.27</td></tr>
+<tr><td>1500</td><td>1.40</td><td>0.60</td><td>1.35</td></tr>
+<tr><td>2000</td><td>1.20</td><td>6.10</td><td>1.43</td></tr>
+<tr><td>2500</td><td>1.30</td><td>0.65</td><td>1.93</td></tr>
+<tr><td>Average Time</td><td>1.18334</td><td>1.485</td><td>1.445</td></tr>
+</table>
 </hr>
 
 In the tables above, it is evident that the 8 thread search is able to handle more data and complete tasks more quickly when comparing the average times taken for both methods. In PIC simulations, the amount of instructions that would  need to be carried out is much greater than this example, therefore parallel processing with multiple threads would be a preferred method to use. However there are some drawbacks of using parallel processing in PIC simulations, for example when "modelling the plasma as cold, the noise is high" <a href="https://ebookcentral.proquest.com/lib/surrey/reader.action?c=UERG&docID=3041636&ppg=133">(Grigoryev et al., 2002)</a>, which is an issue as it means that significant amounts of irrelevant data is produced, which may hide any important underlying patterns that may exist. (may need to find a reference for this). Another drawback is that "the computational requirements can be very high and they drastically increase with increasing plasma density and size of the calculation domain" <a href="https://doi-org.surrey.idm.oclc.org/10.1063/1.5011799">(Wünderlich et al., 2018)</a>, which will cause the computational time taken to increase, which could significantly effect the availability of real time data results. These drawbacks may suggest that parallel processing is not the most suitable method to obtain real-time data, since the time taken must be very minimal to be able to achieve this (add specifics here?). Another disadvantage that can come from parallel processing in general is the limited software compatibility, meaning more money may have to be spent in order to optimise software as well as purchasing specialised hardware. As well as these costs, there are added costs as more powerful parallel systems will have increased power consumption. <br> <br> 
