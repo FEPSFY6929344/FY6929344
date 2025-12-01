@@ -227,7 +227,66 @@ Taking into account all the points that have been discussed above, it is evident
 </p>
 
 
+<button class="accordion">
+  <span class="arrow">►</span> Article References
+</button>
+<div class="panel">
+  <ol>
+    <li>Author, A. (Year). Title. Journal Name.</li>
+    <li>Author, B. (Year). Title. Journal Name.</li>
+  </ol>
+</div>
 
+<button class="accordion">
+  <span class="arrow">►</span> Video References
+</button>
+<div class="panel">
+  <ol>
+    <li>Source 1 used in video</li>
+    <li>Source 2 used in video</li>
+  </ol>
+</div>
+
+<style>
+.accordion {
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.accordion.active .arrow {
+  transform: rotate(90deg); /* arrow points down when open */
+}
+
+.panel {
+  display: none;
+  padding-left: 25px;
+  padding-top: 5px;
+}
+</style>
+
+<script>
+const acc = document.querySelectorAll(".accordion");
+acc.forEach(button => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("active");
+    const panel = button.nextElementSibling;
+    panel.style.display = panel.style.display === "block" ? "none" : "block";
+  });
+});
 
 
 
