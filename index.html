@@ -293,9 +293,7 @@ Taking into account all the points that have been discussed above, it is evident
 	box-sizing: border-box;
 	padding: 10px;
 }
-	.panel ol li {
-  margin-bottom: 10px; /* space between items instead of using <br> */
-}
+
 </style>
 
 <script>
@@ -306,13 +304,12 @@ accordions.forEach(button => {
     button.classList.toggle("active");
     const panel = button.nextElementSibling;
 
-  if (panel.style.maxHeight) {
-      panel.style.maxHeight = null; // collapse
-    } else {
-      panel.style.maxHeight = "none";             // temporarily remove restriction
-      const fullHeight = panel.scrollHeight;      // measure actual height
-      panel.style.maxHeight = fullHeight + "px";  // set exact height
-      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (panel.style.maxHeight) {
+    panel.style.maxHeight = null; // collapse
+	} 
+    else {
+    panel.style.maxHeight = (panel.scrollHeight + 40) + "px"; // expand
+	panel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 });
