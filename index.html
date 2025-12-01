@@ -293,6 +293,9 @@ Taking into account all the points that have been discussed above, it is evident
 	box-sizing: border-box;
 	padding: 10px;
 }
+	.panel ol li {
+  margin-bottom: 10px; /* space between items instead of using <br> */
+}
 </style>
 
 <script>
@@ -306,7 +309,7 @@ accordions.forEach(button => {
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null; // collapse
     } else {
-      panel.style.maxHeight = (panel.scrollHeight + 20) + "px"; // expand
+      panel.style.maxHeight = (panel.scrollHeight) + "px"; // expand
 	  panel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
