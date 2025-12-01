@@ -306,11 +306,13 @@ accordions.forEach(button => {
     button.classList.toggle("active");
     const panel = button.nextElementSibling;
 
-    if (panel.style.maxHeight) {
+  if (panel.style.maxHeight) {
       panel.style.maxHeight = null; // collapse
     } else {
-      panel.style.maxHeight = (panel.scrollHeight) + "px"; // expand
-	  panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      panel.style.maxHeight = "none";             // temporarily remove restriction
+      const fullHeight = panel.scrollHeight;      // measure actual height
+      panel.style.maxHeight = fullHeight + "px";  // set exact height
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 });
