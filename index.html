@@ -306,6 +306,7 @@ accordions.forEach(button => {
       panel.style.maxHeight = null; // collapse
     } else {
       panel.style.maxHeight = (panel.scrollHeight + 20) + "px"; // expand
+	  panel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 });
