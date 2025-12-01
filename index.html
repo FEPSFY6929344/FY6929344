@@ -284,7 +284,7 @@ Taking into account all the points that have been discussed above, it is evident
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding-left: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .container {
@@ -305,7 +305,7 @@ accordions.forEach(button => {
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null; // collapse
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px"; // expand
+      panel.style.maxHeight = (panel.scrollHeight + 20) + "px"; // expand
     }
   });
 });
