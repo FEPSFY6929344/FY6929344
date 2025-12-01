@@ -280,7 +280,7 @@ Taking into account all the points that have been discussed above, it is evident
 }
 
 .panel {
-  max-height: 1000px;
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding-left: 25px;
@@ -301,7 +301,7 @@ accordions.forEach(button => {
   button.addEventListener("click", () => {
     button.classList.toggle("active");
     const panel = button.nextElementSibling;
-    
+
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null; // collapse
     } else {
@@ -309,6 +309,7 @@ accordions.forEach(button => {
     }
   });
 });
+
 </script>
 
 
