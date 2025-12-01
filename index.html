@@ -259,6 +259,7 @@ Taking into account all the points that have been discussed above, it is evident
   font-size: 1em;
   display: flex;
   align-items: center;
+  transition: background-color 0.2s;
 }
 
 .arrow {
@@ -272,21 +273,29 @@ Taking into account all the points that have been discussed above, it is evident
 }
 
 .panel {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
   padding-left: 25px;
-  padding-top: 5px;
 }
 </style>
 
 <script>
-const acc = document.querySelectorAll(".accordion");
-acc.forEach(button => {
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(button => {
   button.addEventListener("click", () => {
     button.classList.toggle("active");
     const panel = button.nextElementSibling;
-    panel.style.display = panel.style.display === "block" ? "none" : "block";
+    
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null; // collapse
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px"; // expand
+    }
   });
 });
+</script>
 
 
 
