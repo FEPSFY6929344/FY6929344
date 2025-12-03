@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!section) return 0;
 
         // Only select <p> elements directly inside the section
-        const paragraphs = section.querySelectorAll('p');
+        const paragraphs = section.querySelectorAll('p, strong');
 
         let totalWords = 0;
 
