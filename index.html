@@ -17,7 +17,7 @@
 <body style="background-color:#FFFFFF;">
 </head>
 
-<body style="background-color:#FFFFFF;">
+
 <div class="content-wrapper">
   <!-- All your content goes here -->
 
@@ -433,22 +433,17 @@ button.addEventListener("click", changeColor);
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
-<hr>
+
 <script>
 // Function to calculate word count in a section
 function displayWordCount(sectionId) {
     const section = document.getElementById(sectionId);
     if (!section) return 0;
 
-    const paragraphs = section.querySelectorAll('p');
-    let totalWords = 0;
-
-    paragraphs.forEach(p => {
-        const words = p.textContent.trim().split(/\s+/).filter(Boolean);
-        totalWords += words.length;
-    });
-
-    return totalWords;
+    // Get all text inside the section
+    const text = section.innerText || section.textContent;
+    const words = text.trim().split(/\s+/).filter(Boolean);
+    return words.length;
 }
 
 // Function to display total word count
@@ -463,6 +458,7 @@ function displayTotalWordCount() {
 // Run after DOM is loaded
 document.addEventListener("DOMContentLoaded", displayTotalWordCount);
 </script>
+
 
 
 
