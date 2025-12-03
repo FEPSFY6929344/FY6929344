@@ -448,15 +448,40 @@ button.addEventListener("click", changeColor);
 <!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
 <hr>
+
+
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+    function displayWordCount(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return 0;
 
+        // Only select <p> elements directly inside the section
+        const paragraphs = section.querySelectorAll('p');
 
-function displayTotalWordCount() {
-    const total = displayWordCount("Intro_text") + displayWordCount("Analysis_text");
-    document.getElementById("totalWordCount").innerText = `Total word count (excluding tables and subheadings): ${total}`;
-}
+        let totalWords = 0;
 
-document.addEventListener("DOMContentLoaded", displayTotalWordCount);
+        paragraphs.forEach(p => {
+            const words = p.textContent.trim().split(/\s+/).filter(Boolean);
+            totalWords += words.length;
+        });
 
+        return totalWords;
+    }
+
+    function displayTotalWordCount() {
+        const introCount = displayWordCount("Intro_text");
+        const analysisCount = displayWordCount("Analysis_text");
+        const total = introCount + analysisCount;
+
+        document.getElementById("totalWordCount").innerText =
+            `Total word count (paragraphs only, ignoring tables and headings): ${total}`;
+    }
+
+    displayTotalWordCount();
+});
 </script>
+
+
+
 </html>
