@@ -112,6 +112,46 @@ html {
     text-align: center;
   }
 
+.accordion {
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  margin-bottom: 5px;
+}
+
+.arrow {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.accordion.active .arrow {
+  transform: rotate(90deg); /* arrow points down when open */
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+
+.container, .content-wrapper {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
 </style>
 
 
@@ -276,48 +316,7 @@ Taking all the points discussed into account, it is evident that parallel proces
   </ol>
 </div>
 
-<style>
-.accordion {
-  background-color: #f9f9f9;
-  color: #333;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.2s;
-  margin-bottom: 5px;
-}
 
-.arrow {
-  display: inline-block;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-
-.accordion.active .arrow {
-  transform: rotate(90deg); /* arrow points down when open */
-}
-
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding-left: 25px;
-  margin-bottom: 25px;
-}
-
-.container, .content-wrapper {
-	width: 100%;
-	max-width: 100%;
-	box-sizing: border-box;
-	padding: 10px;
-}
-
-</style>
 
 <script>
 const accordions = document.querySelectorAll(".accordion");
