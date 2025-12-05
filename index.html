@@ -337,12 +337,40 @@ accordions.forEach(button => {
 
 
 <hr>
-	<h4 id="Information">Information</h4>
+<h4 id="Information">Information</h4>
 
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
 
+<script>
+// Function to calculate word count in a section
+function displayWordCount(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return 0;
 
+    // Get all text inside the section
+    const text = section.innerText || section.textContent;
+    const words = text.trim().split(/\s+/).filter(Boolean);
+    return words.length;
+}
 
+// Function to display total word count
+function displayTotalWordCount() {
+    const IntroductionCount = displayWordCount("Intro_text");
+    const AnalysisCount = displayWordCount("Analysis_text");
+    const totalWordCount = IntroductionCount + AnalysisCount;
 
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+}
+
+// Run after DOM is loaded
+document.addEventListener("DOMContentLoaded", displayTotalWordCount);
+</script>
+
+	
 
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
@@ -393,37 +421,6 @@ accordions.forEach(button => {
     window.onload = getLastUpdatedTime;
 </script>
 
-
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-
-<script>
-// Function to calculate word count in a section
-function displayWordCount(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (!section) return 0;
-
-    // Get all text inside the section
-    const text = section.innerText || section.textContent;
-    const words = text.trim().split(/\s+/).filter(Boolean);
-    return words.length;
-}
-
-// Function to display total word count
-function displayTotalWordCount() {
-    const IntroductionCount = displayWordCount("Intro_text");
-    const AnalysisCount = displayWordCount("Analysis_text");
-    const totalWordCount = IntroductionCount + AnalysisCount;
-
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-}
-
-// Run after DOM is loaded
-document.addEventListener("DOMContentLoaded", displayTotalWordCount);
-</script>
 
 
 
